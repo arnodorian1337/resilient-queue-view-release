@@ -1,0 +1,30 @@
+{
+  "windows-queue-check": {
+    "PreToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoLogo -NoProfile -NonInteractive -File .\\queue-check.ps1",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "windows-file-check": {
+    "PreToolUse": [
+      {
+        "matcher": "view_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoLogo -NoProfile -NonInteractive -File .\\view-check.ps1",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
